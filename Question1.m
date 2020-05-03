@@ -1,7 +1,7 @@
 constants;
 
-a = input("Please Enter length of box (best number is 4): ");
-m = input("Please Enter Mass of particle (Changes in wavefunction only seen with mass < 0.05): ")*(10^0);
+a = input("Please Enter length of box: ");
+m = input("Please Enter Mass of particle: ")*(10^0);
 n = input("Please Enter quantum number i.e nth energy state: ");
 
 nt = 50;                        % Number of time steps
@@ -32,7 +32,7 @@ for k =  1 : nt
     t = t + dt;
     hold off
 end
-msg = "Stationary Wave - The Real and Imaginary Parts of the wave oscillate but the probability distribution does not change"
+disp("Stationary Wave - The Real and Imaginary Parts of the wave oscillate but the probability distribution does not change")
 
 wavelet1 = PIBwavelet(1,x, a);
 wavelet2 = PIBwavelet(2,x, a);
@@ -59,4 +59,4 @@ for k = 1 : nt
     hold off
 end
 
-msg = "Non-Stationary Wave: All aspects of the wave change over time, local maximums form depending on the coefficients strength of each n"
+disp("Non-Stationary Wave: All aspects of the wave change over time, local maximums form depending on the coefficients strength of each n")
