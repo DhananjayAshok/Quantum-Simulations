@@ -1,6 +1,6 @@
 constants;
 l = input("Please Enter Size of Box (3 works best): ");
-m = input("Please Enter Mass of particle (*10^65) 0.05 works best: ")*10^-65;
+m = input("Please Enter Mass of particle works best with mass < 1: ");
 nt = 40;
 dt = 0.00001;
 estimates = 300;
@@ -55,8 +55,8 @@ for k = 1: estimates
     averageKE = averageKE + (chalf(k)^2)*energy;
 end
 averageKEHalf = averageKE
-msg = "Average Kinetic Energy Should Not Change Over time. This is because as Potential energy is always 0 in the box and total energy is conserved kinetic energy must remain constant over time"
-msg = "This is true regardless of the length parameter of the wavefunction and hence should hold true for L/4 as well"
+disp("Average Kinetic Energy Should Not Change Over time. This is because as Potential energy is always 0 in the box and total energy is conserved kinetic energy must remain constant over time")
+disp("This is true regardless of the length parameter of the wavefunction and hence should hold true for L/4 as well")
 
 
 

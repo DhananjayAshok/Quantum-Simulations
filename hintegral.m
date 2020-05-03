@@ -1,7 +1,7 @@
 function [result] = hintegral(question, len, parameter ,mass,n, m)
 %UNTITLED2 Summary of this function goes here
 %   Detailed explanation goes here
-h = 1.055e-34;
+h = 1;
 if question == 3
     if n ~= m
         num = 4 * parameter * len * n * m * (((-1)^(n+m)) - 1 );
