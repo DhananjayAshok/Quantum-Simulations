@@ -1,7 +1,7 @@
 constants;
 
 a = input("Please Enter length of box (best number is 4): ");
-m = input("Please Enter Mass of particle *10^65 (Changes in wavefunction only seen with mass < 0.05): ")*(10^-65);
+m = input("Please Enter Mass of particle (Changes in wavefunction only seen with mass < 0.05): ")*(10^0);
 n = input("Please Enter quantum number i.e nth energy state: ");
 
 nt = 50;                        % Number of time steps
@@ -12,7 +12,6 @@ dt = Tn / nt;                     % time step [s]
 t = 0;                            % initial time [s]
 
 x = linspace(0, a, 200);
-%wavelet = sqrt(2/a)*sin((n/a)*pi.*x);
 wavelet = PIBwavelet(n, x, a);
 time_factor = e^-(1i*t*En);
 figure(1)
