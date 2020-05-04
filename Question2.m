@@ -18,11 +18,13 @@ squarter = 0;
 chalf = zeros(1, estimates); % Row vector
 cquarter = zeros(1, estimates);
 for k = 1 : estimates
-    chalf(k) = cn(k, l, 2);
-    cquarter(k) = cn(k,l,4);
+    chalf(k) = smartcn(k, l, 2);
+    cquarter(k) = smartcn(k,l,4);
     shalf = shalf + (chalf(k))^2;
     squarter = squarter + (cquarter(k))^2;
 end
+disp(shalf)
+disp(squarter)
 
 
 xhalf = linspace(0, half, datapoints);
