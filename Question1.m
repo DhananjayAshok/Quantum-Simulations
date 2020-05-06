@@ -26,6 +26,7 @@ for k =  1 : nt
     legend('real \Psi','imaginary \Psi','prob. density');
     titlestring = ["Stationary Wave Dynamics at t = ", t];
     title(titlestring);
+    axis([0 a -1.5 1.5])
     pause(0.1)
     
     Movie(k) = getframe;
@@ -52,6 +53,7 @@ for k = 1 : nt
     legend('real \Psi','imaginary \Psi','prob. density');
     titlestring = ["Superposition Wave Dynamics at t = ", t];
     title(titlestring);
+    axis([0 a -1.5 1.5])
     pause(0.1)
     
     Movie(k) = getframe;

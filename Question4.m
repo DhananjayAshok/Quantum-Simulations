@@ -4,10 +4,11 @@ len = 40;
 mass = input("Please Enter Mass of particle: ");
 frequency = input("Please Enter the desired frequency of the particle: ");
 omega = frequency * 2 * pi;
+method = "trapezoidal";
 
 k = 100; % Number of N we use in our estimate ( the answer for k = 10 is same as answer for k = 200)
 
-fun = @(x) equations(4, x, k, len, omega, mass);
+fun = @(x) equations(method, 4, x, k, len, omega, mass);
 x0 = rand(1, k+1);
 x = fsolve(fun,x0);
 lowest_energy = x(k+1);
